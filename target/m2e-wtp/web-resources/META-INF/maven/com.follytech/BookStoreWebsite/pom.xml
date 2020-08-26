@@ -1,7 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.pyramid-tech</groupId>
+	<groupId>com.follytech</groupId>
 	<artifactId>BookStoreWebsite</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
@@ -24,6 +24,26 @@
 					<target>1.8</target>
 				</configuration>
 			</plugin>
+			<plugin>
+	            <groupId>org.apache.maven.plugins</groupId>
+	            <artifactId>maven-dependency-plugin</artifactId>
+	            <executions>
+	                <execution>
+	                    <phase>package</phase>
+	                    <goals><goal>copy</goal></goals>
+	                    <configuration>
+	                        <artifactItems>
+	                            <artifactItem>
+	                                <groupId>com.heroku</groupId>
+	                                <artifactId>webapp-runner</artifactId>
+	                                <version>9.0.30.0</version>
+	                                <destFileName>webapp-runner.jar</destFileName>
+	                            </artifactItem>
+	                        </artifactItems>
+	                    </configuration>
+	                </execution>
+	            </executions>
+	        </plugin>
 		</plugins>
 	</build>
 	<dependencies>
@@ -90,5 +110,10 @@
 			<version>4.3.1</version>
 		</dependency>
 
+		<dependency>
+			<groupId>com.heroku.sdk</groupId>
+			<artifactId>heroku-maven-plugin</artifactId>
+			<version>3.0.3</version>
+		</dependency>
 	</dependencies>
 </project>
