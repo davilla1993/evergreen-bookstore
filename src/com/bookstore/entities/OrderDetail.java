@@ -14,7 +14,7 @@ import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "order_detail", catalog = "bookstoredb")
+@Table(name = "order_detail", catalog = "heroku_e95c94142a793f2")
 @NamedQueries({
 @NamedQuery(name="OrderDetail.bestSelling", query = "SELECT od.book FROM OrderDetail od GROUP BY od.book.bookId ORDER BY SUM(od.quantity) DESC")
 })

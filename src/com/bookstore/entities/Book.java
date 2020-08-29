@@ -25,7 +25,7 @@ import javax.persistence.TemporalType;
 import javax.persistence.Transient;
 
 @Entity
-@Table(name = "book", catalog = "bookstoredb")
+@Table(name = "book", catalog = "heroku_e95c94142a793f2")
 @NamedQueries({ @NamedQuery(name = "Book.findAll", query = "SELECT b FROM Book b ORDER BY b.bookId"),
 		@NamedQuery(name = "Book.findByTitle", query = "SELECT b FROM Book b WHERE b.title = :title"),
 		@NamedQuery(name = "Book.countAll", query = "SELECT COUNT(*) FROM Book b"),
