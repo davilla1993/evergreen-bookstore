@@ -9,12 +9,13 @@
           	<properties>
           	
           					<!-- Production db credentials -->
-          		<property name ="javax.persistence.jdbc.url" value="jdbc:mysql://us-cdbr-east-02.cleardb.com/heroku_e95c94142a793f2?sslmode=require"/>
-               <property name ="javax.persistence.jdbc.user" value="b585180b39987d" />
+          	   <property name ="javax.persistence.jdbc.url" 
+          	   value="jdbc:mysql://us-cdbr-east-02.cleardb.com:5432/heroku_e95c94142a793f2?sslmode=require"/>
+               <property name ="javax.persistence.jdbc.user" value="b585180b39987d " />
                <property name = "javax.persistence.jdbc.password" value="3255bb4a" />
                 
                 			<!-- Development db credentials -->
-              <!--   <property name ="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/bookstoredb?serverTimezone=UTC"/>
+               <!--  <property name ="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/bookstoredb?serverTimezone=UTC"/>
                 <property name ="javax.persistence.jdbc.user" value="root" />
                 <property name = "javax.persistence.jdbc.password" value="toor" /> -->
                 
