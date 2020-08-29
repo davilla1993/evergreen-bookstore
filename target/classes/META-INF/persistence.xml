@@ -10,7 +10,7 @@
           	
           					<!-- Production db credentials -->
           	   <property name ="javax.persistence.jdbc.url" 
-          	   value="jdbc:mysql://us-cdbr-east-02.cleardb.com/heroku_e95c94142a793f2?sslmode=require"/>
+          	   value="jdbc:mysql://us-cdbr-east-02.cleardb.com:5432/heroku_e95c94142a793f2?sslmode=require"/>
                <property name ="javax.persistence.jdbc.user" value="b585180b39987d " />
                <property name = "javax.persistence.jdbc.password" value="3255bb4a" />
                 
@@ -27,7 +27,7 @@
           		<property name="hibernate.c3p0.max_size" value="10" />
           		<property name="hibernate.c3p0.timeout" value = "120" />
            		<property name="hibernate.c3p0.max_statements" value="50" />
-                <property name="hibernate.c3p0.idle_test_period" value="3000" />
+                <property name="hibernate.c3p0.idle_test_period" value="300" />
       
           	</properties>
           </persistence-unit>
