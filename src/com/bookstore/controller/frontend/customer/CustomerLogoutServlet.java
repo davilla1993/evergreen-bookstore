@@ -1,6 +1,8 @@
 package com.bookstore.controller.frontend.customer;
 
 import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -22,7 +24,9 @@ public class CustomerLogoutServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.getSession().removeAttribute("loggedCustomer");
 		
-		response.sendRedirect(request.getContextPath());
+		String logoutPage = "frontend/index.jsp";
+		RequestDispatcher dispatcher = request.getRequestDispatcher(logoutPage);
+		dispatcher.forward(request, response);
 	}
 
 }
